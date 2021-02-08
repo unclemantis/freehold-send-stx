@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": false,
+    "strict": true,
+    "outDir": "lib",
+    "sourceMap": false,
+    "esModuleInterop": false,
+    "baseUrl": ".",
+    "noImplicitAny": false,
+    "checkJs": false
+  },
+  "paths": {
+    "@stacks/auth": [
+      "./packages/auth/src"
+    ],
+    "@stacks/cli": [
+      "./packages/cli/src"
+    ],
+    "@stacks/common": [
+      "./packages/common/src"
+    ],
+    "@stacks/encryption": [
+      "./packages/encryption/src"
+    ],
+    "@stacks/keychain": [
+      "./packages/keychain/src"
+    ],
+    "@stacks/network": [
+      "./packages/network/src"
+    ],
+    "@stacks/profile": [
+      "./packages/profile/src"
+    ],
+    "@stacks/storage": [
+      "./packages/storage/src"
+    ],
+    "@stacks/transactions": [
+      "./packages/transactions/src"
+    ]
+  },
+  "include": [
+    "packages/**/src/**/*",
+    "packages/**/test/**/*",
+    "src/**/*",
+    "tests/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib"
+  ]
+}

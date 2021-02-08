@@ -1,0 +1,16 @@
+(define-map address-map { recipient: principal} { amount: uint})
+
+(define-public (transfer (amount uint) (recipient principal))
+  (begin
+    (if (<= amount u1000)
+      (if (is-eq (stx-get-balance recipient) u0)
+        (if (map-insert address-map { recipient: recipient } { amount: amount })
+          (stx-transfer? amount tx-sender recipient)
+          (ok false)
+        )
+        (ok false)
+      )
+      (ok false)
+    )
+  )
+)
